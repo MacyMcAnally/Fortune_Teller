@@ -32,7 +32,7 @@ public class FortuneController {
 		System.out.println("number is : "+randomNumber);
 		return fortuneService.generateFortuneRandomly(randomNumber);
 	}
-	@PostMapping("/saveFortune")
+	@PostMapping("/save")
 	public Fortune saveFortune(@RequestBody User user) {
 		return fortuneService.saveFortune(user);
 	}
