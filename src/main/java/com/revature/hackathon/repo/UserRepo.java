@@ -1,9 +1,11 @@
 package com.revature.hackathon.repo;
 
-public class UserRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-	public UserRepo() {
-		// TODO Auto-generated constructor stub
-	}
+import com.revature.hackathon.model.User;
 
+@Repository
+public interface UserRepo extends JpaRepository<User,Integer> {
+	public User findById(int id);
 }
