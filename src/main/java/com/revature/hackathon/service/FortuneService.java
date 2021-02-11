@@ -13,8 +13,10 @@ public class FortuneService {
 	@Autowired
 	private FortuneRepo fortuneRepo;
 	public List<Fortune> findAllFortune() {
-		System.out.println("I am here !!!!!!"+ fortuneRepo.findAll());
 		return fortuneRepo.findAll();
+	}
+	public Fortune generateFortuneRandomly(int id) {
+		return fortuneRepo.findAllById(id);
 	}
 
 }

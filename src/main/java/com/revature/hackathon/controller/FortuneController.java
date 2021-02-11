@@ -17,8 +17,14 @@ public class FortuneController {
 	private FortuneService fortuneService;
 	
 	@GetMapping("/all")
-	public List<Fortune> test() {
+	public List<Fortune> findAllFortune() {
 		return fortuneService.findAllFortune();
+	}
+	@GetMapping("/get")
+	public Fortune  generateFortuneRandomly() {
+		int randomNumber = (int) (Math.random());
+		System.out.println("number is : "+randomNumber);
+		return fortuneService.generateFortuneRandomly(randomNumber);
 	}
 
 }
