@@ -1,9 +1,14 @@
 package com.revature.hackathon.service;
 
-public class FortuneService {
+import java.util.List;
 
-	public FortuneService() {
-		// TODO Auto-generated constructor stub
+import com.revature.hackathon.model.Fortune;
+import com.revature.hackathon.repo.FortuneRepo;
+
+public class FortuneService {
+	private FortuneRepo fortuneRepo;
+	public List<Fortune> findAllFortune() {
+		return fortuneRepo.findAll();
 	}
 
 }
