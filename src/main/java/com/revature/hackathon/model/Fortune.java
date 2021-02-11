@@ -1,35 +1,29 @@
 package com.revature.hackathon.model;
 
-import java.time.LocalDateTime;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.CreationTimestamp;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
 public class Fortune {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User userId;
-	@CreationTimestamp
-	private LocalDateTime date;
-	private String message;
-	
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private int fortuneMessageId;
+  @CreatedDate
+  private LocalDate date;
+  private String message;
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private User user;
 
 }
