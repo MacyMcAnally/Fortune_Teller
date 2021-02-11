@@ -1,13 +1,23 @@
   <!-- Login button: show if NOT authenticated -->
   <li
-  class="nav-item"
+  class="btn btn-primary btn-margin"
   *ngIf="(auth.isAuthenticated$ | async) === false"
 >
   <button
     id="qsLoginBtn"
     class="btn btn-primary btn-margin"
     (click)="loginWithRedirect()"
-  >
-    Log in
+  >  Log in
   </button>
-</li>
+  </li>
+
+ <l1 class="btn btn-link p-0"
+  *ngIf="(auth.isAuthenticated$ | async) === true">
+
+  <button
+  class="btn btn-link p-0"
+  id="qsLogoutBtn"
+  (click)="logout()"
+>
+  Log out
+</button>

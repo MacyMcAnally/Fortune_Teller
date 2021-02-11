@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit {
       this.auth.loginWithRedirect();
   }
 
+  logout() {
+    this.auth.logout({ returnTo: 'http://localhost:4200' });
+  }
+
 }
 
 
