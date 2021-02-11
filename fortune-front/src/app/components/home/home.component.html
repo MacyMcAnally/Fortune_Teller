@@ -1,8 +1,8 @@
 <div style="width:600px;margin:auto;text-align:center;">
     <img src="assets/img/cookie.gif"/>
-    <h1>This is a fortune.</h1>
+    <h1 style="font-family: 'Lato',sans-serif;font-weight: 300;font-style: italic;">{{fortune.message}}</h1>
     <br/>
-    <button class="btn primary">Open a Cookie</button>
+    <button class="btn primary" (click)="getFortune()">Open a Cookie</button>
     <button class="btn save">Save a Cookie</button>
 </div>
 <app-login></app-login>
