@@ -1,9 +1,8 @@
 package com.revature.hackathon.repo;
 
-public class FortuneRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.revature.hackathon.model.Fortune;
 
-	public FortuneRepo() {
-		// TODO Auto-generated constructor stub
-	}
-
+public interface FortuneRepo extends JpaRepository<Fortune,Integer> {
+	
 }
