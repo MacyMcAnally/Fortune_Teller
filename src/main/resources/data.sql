@@ -27,7 +27,3 @@ insert into Fortune (message, date) values ('Your interviewer did their PhD thes
 insert into Fortune (message, date) values ('Relax and just embrace the feeling of helplessness, there are nothing you can do about it', current_timestamp);
 insert into Fortune (message, date) values ('Do not worry you will not get ANY negative feedback, they ghosted you."', current_timestamp);
 
-
-
-
-
